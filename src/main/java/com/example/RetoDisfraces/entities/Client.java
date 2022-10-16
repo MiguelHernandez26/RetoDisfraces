@@ -28,10 +28,10 @@ public class Client implements Serializable{
     @Column(name = "age")
     private Integer age;
 
-    /*
+    
     @OneToMany(mappedBy ="client", cascade = CascadeType.ALL)
     private Set<Message> messages = new HashSet<>();
-    */
+    
     @OneToMany(mappedBy ="client", cascade = CascadeType.ALL)
     private Set<Reservation> reservations = new HashSet<>();
     
@@ -66,14 +66,14 @@ public class Client implements Serializable{
     public void setAge(Integer age) {
         this.age = age;
     }
-    /*
+    
     public Set<Message> getMessages() {
         return messages;
     }
     public void setMessages(Set<Message> messages) {
         this.messages = messages;
     }
-    */
+    
     public Set<Reservation> getReservations() {
         return reservations;
     }
